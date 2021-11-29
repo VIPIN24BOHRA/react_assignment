@@ -1,0 +1,43 @@
+.signin_page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.google_logo {
+  width: 100px;
+}
+.signin_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  width: fit-content;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 40px;
+}
+.signin_block h3 {
+  text-align: center;
+}
+.signin {
+  display: flex;
+  width: fit-content;
+  padding: 10px;
+  align-items: center;
+  background-color: blue;
+  cursor: pointer;
+
+  color: white;
+}
+
+.signin_page h1 {
+  font-size: 400%;
+  text-align: center;
+}
+.signin img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  background-color: white;
+}

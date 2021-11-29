@@ -1,0 +1,39 @@
+.nav {
+  display: flex;
+  background-color: blue;
+}
+.nav_box {
+  flex: 1;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.logo {
+  width: 5%;
+  height: 5%;
+  margin: 10px 0px 10px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+.nav_button {
+  background-color: white;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  margin-right: 5%;
+  color: blue;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.nav_button:hover {
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+.nav_link {
+  margin-right: 5%;
+}
