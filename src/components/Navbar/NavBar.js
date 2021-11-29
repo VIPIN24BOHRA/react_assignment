@@ -17,7 +17,12 @@ export default function Navbar() {
   };
   return (
     <div className="nav">
-      <Logo className="logo" />
+      <Logo
+        className="logo"
+        onClick={() => {
+          Navigate("/");
+        }}
+      />
       <div className="nav_box">
         <Link to="/people" className="nav_link">
           <button className="nav_button"> People</button>

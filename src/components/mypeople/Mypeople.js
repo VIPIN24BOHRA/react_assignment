@@ -4,11 +4,14 @@ import { useEffect, useState } from "react";
 import { ReactComponent as Addresslogo } from "../../utilities/address.svg";
 import { ReactComponent as Phonelogo } from "../../utilities/phone.svg";
 import { ReactComponent as Emaillogo } from "../../utilities/email.svg";
+import Loader from "react-loader-spinner";
 import "../people/people.css";
 export default function Mypeople(props) {
   const q = query(colRef, where("uid", "==", props.user.uid));
+  const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   useEffect(async () => {
+    setLoading(true);
     try {
       const getSnapShot = await getDocs(q);
       let allUser = [];
@@ -16,6 +19,7 @@ export default function Mypeople(props) {
         allUser.push({ ...doc.data() });
       });
       setUsers(allUser);
+      setLoading(false);
     } catch (e) {
       console.log(e);
     }
@@ -53,6 +57,17 @@ export default function Mypeople(props) {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        {loading && (
+          <Loader
+            type="ThreeDots"
+            color="blue"
+            height={200}
+            width={200}
+            className="loading"
+          />
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,9 @@
 .nav {
   display: flex;
   background-color: blue;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
 }
 .nav_box {
   flex: 1;
@@ -16,6 +19,7 @@
   padding: 10px;
   border-radius: 10px;
   background-color: white;
+  cursor: pointer;
 }
 .nav_button {
   background-color: white;
